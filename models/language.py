@@ -5,9 +5,5 @@ from models.base import BaseModel
 class Language(BaseModel):
     __tablename__ = 'language'
 
-    name = Column(String)
+    name = Column(String, nullable=False)
     icon = Column(String)
-
-    def __init__(self, name, icon) -> None:
-        self.name = name
-        self.icon = icon
